@@ -25,19 +25,7 @@ const images = [
   },
 ];
 
-// Напиши скрипт для створення галереї зображень на основі масиву даних. HTML містить список ul.gallery.
-// <ul class="gallery"></ul>;
-// Використовуй масив об'єктів images для створення елементів <img>, вкладених в <li>.
-// Ти можеш створити й додати HTML-елементи, використовуючи document.createElement() і elem.append() або шаблонні рядки і elem.insertAdjacentHTML().
-// Усі елементи галереї повинні додаватися в DOM за одну операцію додавання.
-// Додай мінімальне оформлення галереї флексбоксами через CSS класи.
-
-// На що буде звертати увагу ментор при перевірці:
-// Створена й додана в DOM галерея із трьох зображень
-// Галерея додана у список ul.gallery і являє собою 3 елементи <li>, в які вкладені елементи <img>
-// Для створення елементів <img> використані дані з масиву об’єктів images
-// Усі елементи галереї додані в DOM за одну операцію додавання
-// Є мінімальне оформлення галереї флексбоксами через CSS класи
+// ________________Варіант 1 (кількість картинок в рядку підлаштовуються під розміри вікна)________________
 
 const container = document.querySelector('.gallery');
 
@@ -56,20 +44,35 @@ function createGallery(picturesArr) {
     .join('');
 }
 
-container.style.display = 'flex';
-container.style.flexWrap = 'wrap';
-container.style.gap = '25px';
 container.insertAdjacentHTML('beforeend', createGallery(images));
 
-// images.forEach(img => {
-//   const listItem = document.createElement('li');
-//   const imgElement = document.createElement('img');
+// ________________Варіант 2 (незмінно 3 картинки в рядку)________________
 
-//   imgElement.src = img.url;
-//   imgElement.alt = img.alt;
+// const container = document.querySelector('.gallery');
 
-//   listItem.appendChild(imgElement);
-//   container.appendChild(listItem);
+// function createGallery(picturesArr) {
+//   const galleryHTML = picturesArr
+//     .map(
+//       ({ url, alt }) =>
+//         `
+//         <img src="${url}" alt="${alt}" class="picture" width = '360' height = '300'>
+//         `
+//     )
+//     .join('');
 
-//   console.log(container);
-// });
+//   const firstPic = galleryHTML.slice(0, galleryHTML.length / 2);
+//   const lastPic = galleryHTML.slice(firstPic.length);
+
+//   const galleryDivided = `
+//     <div class="gallery-section">
+//       ${firstPic}
+//     </div>
+//     <div class="gallery-section">
+//       ${lastPic}
+//     </div>
+//   `;
+
+//   return galleryDivided;
+// }
+
+// container.innerHTML = createGallery(images);

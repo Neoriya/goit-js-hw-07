@@ -1,0 +1,59 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* ________________Варіант 1 (кількість картинок в рядку підлаштовуються під розміри вікна)________________ */
+/* (не змогла зробити так щоб падінги в .gallery ul були при зменьшенні єкерану і відповідно зменьшенні кількості картинок в рядку не розтягувалися разом з екраном а були завжди однакові 156px) */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+  padding: 100px 156px;
+  background-color: transparent;
+  max-width: 1440px;
+  justify-content: center;
+}
+
+.picture {
+  object-fit: cover;
+  max-width: 100%;
+  display: block;
+}
+
+/* ________________Варіант 2 (незмінно 3 картинки в рядку)________________ */
+/* (не змогла зробити так щоб зображення при зменьшенні екрану пропорційно зменьшувалися і лишалися в межах пропорцій галереї ) */
+
+/* .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  padding: 100px 156px;
+  background-color: transparent;
+  max-width: 1440px;
+  justify-content: center;
+} */
+
+/* .gallery-section {
+  display: flex;
+  column-gap: 24px;
+}
+
+.picture {
+  display: flex;
+  max-width: 100%;
+  object-fit: cover;
+} */
