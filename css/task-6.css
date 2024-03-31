@@ -78,7 +78,7 @@ button {
 }
 
 button:hover {
-  background: #6b89f5;
+  background: #6c8cff;
 }
 
 #controls :last-child {
@@ -86,5 +86,5 @@ button:hover {
 }
 
 #controls button:last-child:hover {
-  background: #fb7777;
+  background: #ff7070;
 }
