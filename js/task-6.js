@@ -40,8 +40,9 @@ const buttonDestroy = document
 function createBoxesClick() {
   containerBox.innerHTML = '';
   if (numberInput.value <= 0 || numberInput.value > 100) {
-    return alert(`You used an invalid value.
+    alert(`You used an invalid value.
 Write a number from 1 to 100.`);
+    numberInput.value = '';
   } else {
     createBoxes(numberInput.value);
   }
@@ -69,3 +70,12 @@ function createBoxes(amount) {
     containerBox.append(box);
   }
 }
+
+const coverBox = document.createElement('div');
+coverBox.classList.add('background-box');
+const pElement = document.querySelector('p');
+
+const parentElement = pElement.parentNode;
+parentElement.insertBefore(coverBox, pElement.nextSibling);
+coverBox.appendChild(document.getElementById('controls'));
+coverBox.appendChild(document.getElementById('boxes'));

@@ -1,0 +1,90 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.background-box {
+  padding: 24px;
+  border-radius: 8px;
+  background: #fff;
+  display: inline-block;
+}
+
+#controls {
+  display: flex;
+  padding: 32px;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 8px;
+  background: #f6f6fe;
+  width: 486px;
+  height: 104px;
+}
+
+#boxes {
+  display: flex;
+  padding: 32px;
+  gap: 16px;
+  border-radius: 8px;
+  background: #f6f6fe;
+  margin-top: 16px;
+  min-width: 486px;
+  min-height: 94px;
+}
+
+input {
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #808080;
+  color: #2e2f42;
+  padding: 8px;
+  font-family: Montserrat, Roboto, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
+  width: 150px;
+  height: 40px;
+}
+
+button {
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #4e75ff;
+  color: #fff;
+  font-family: Montserrat, Roboto, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
+  border: transparent;
+  width: 120px;
+  height: 40px;
+  padding: 0;
+}
+
+button:hover {
+  background: #6b89f5;
+}
+
+#controls :last-child {
+  background: #ff4e4e;
+}
+
+#controls button:last-child:hover {
+  background: #fb7777;
+}
