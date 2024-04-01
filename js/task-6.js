@@ -16,8 +16,6 @@ const buttonDestroy = document
 function createBoxesClick() {
   containerBox.innerHTML = '';
   if (numberInput.value <= 0 || numberInput.value > 100) {
-    alert(`You used an invalid value.
-Write a number from 1 to 100.`);
     numberInput.value = '';
   } else {
     createBoxes(numberInput.value);
@@ -26,10 +24,6 @@ Write a number from 1 to 100.`);
 
 function destroyBoxesClick() {
   containerBox.innerHTML = '';
-  const boxes = containerBox.querySelectorAll('div');
-  if (boxes.length > 0) {
-    boxes[boxes.length - 1].remove();
-  }
   numberInput.value = '';
 }
 
@@ -46,6 +40,8 @@ function createBoxes(amount) {
     containerBox.append(box);
   }
 }
+
+// необов'язкова частина коду, додана для стилізації відповідно макету
 
 const coverBox = document.createElement('div');
 coverBox.classList.add('background-box');

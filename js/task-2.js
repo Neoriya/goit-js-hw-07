@@ -34,8 +34,8 @@ function createGallery(picturesArr) {
     .map(
       ({ url, alt }) =>
         `
-    <li class="card">
-    <div class="image-box" width = '360' height = '300'>
+    <li>
+    <div width = '360' height = '300'>
       <img src="${url}" alt="${alt}" class="picture" width = '360' height = '300'>
       </div>
     </li>

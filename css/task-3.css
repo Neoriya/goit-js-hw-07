@@ -14,7 +14,7 @@ ul {
   list-style: none;
 }
 
-.box {
+/* .box {
   display: flex;
   flex-wrap: wrap;
   width: 408px;
@@ -23,15 +23,16 @@ ul {
   padding: 24px;
   border-radius: 8px;
   height: auto;
-}
+} */
 
 #name-input {
-  width: 100%;
+  width: 360px;
   height: 40px;
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid #808080;
   padding: 8px 16px;
+  margin-top: 24px;
   color: #2e2f42;
   font-family: Montserrat, Roboto, sans-serif;
   font-size: 16px;
