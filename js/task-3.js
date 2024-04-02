@@ -4,7 +4,7 @@ const spanId = document.querySelector('#name-output');
 
 function handlerInput(event) {
   const name = event.currentTarget.value.trim();
-  spanId.textContent = name === '' && ' ' ? 'Anonymous' : `${name}`;
+  spanId.textContent = name === '' ? 'Anonymous' : `${name}`;
 }
 
 // необов'язкова частина коду, додана для стилізації відповідно макету
